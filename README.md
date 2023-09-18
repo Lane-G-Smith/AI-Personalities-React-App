@@ -7,7 +7,7 @@
         width="48"
         height="48"
         />
-        <br /><strong>Discord.js</strong>
+        <br /><strong>OpenAI</strong>
     </td>
     <td align="center" height="108">
       <p align="center">This project is a chat interface for interacting with different AI personalities using the OpenAI GPT-3 API. It's built with Vite, React (in JavaScript), and connects to a MongoDB database with an Express server.
