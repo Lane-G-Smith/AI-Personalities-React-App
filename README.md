@@ -48,11 +48,13 @@ npm run dev
 ## API Used
 OpenAI GPT-4
 
-## Tech Stack Used
+## Tech Stack And Tools
 - Vite: A build tool serving as a Front-end build tool that provides a smoother and leaner development experience.
 - React: A JavaScript library for building user interfaces.
 - MongoDB: A source-available cross-platform document-oriented database program, used for backend database.
 - Express: A back-end web application framework for Node.js, for building web applications and APIs.
+- Tailwind CSS: A utility-first CSS framework for rapidly building custom user interfaces.
+- OpenAI: A library providing convenient access to the OpenAI REST API from TypeScript or JavaScript.
 
 ## Contributions
 Pull requests are welcome. If you improve on this project, please feel free to share it back with the open-source community.
