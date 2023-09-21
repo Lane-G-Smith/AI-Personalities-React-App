@@ -1,6 +1,7 @@
 #
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <h1 align="center">AI-Personalities-React-App</h1>
@@ -83,6 +84,7 @@ MIT
 ## Contributors
 
 ## Contributors ✨
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -90,6 +92,7 @@ MIT
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Lane-G-Smith"><img src="https://avatars.githubusercontent.com/u/108886772?v=4?s=100" width="100px;" alt="Lane G Smith"/><br /><sub><b>Lane G Smith</b></sub></a><br /><a href="#question-Lane-G-Smith" title="Answering Questions">💬</a> <a href="https://github.com/Lane G Smith/AI-Personalities-React-App/commits?author=Lane-G-Smith" title="Code">💻</a> <a href="#content-Lane-G-Smith" title="Content">🖋</a> <a href="#data-Lane-G-Smith" title="Data">🔣</a> <a href="#design-Lane-G-Smith" title="Design">🎨</a> <a href="https://github.com/Lane G Smith/AI-Personalities-React-App/commits?author=Lane-G-Smith" title="Documentation">📖</a> <a href="#ideas-Lane-G-Smith" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-Lane-G-Smith" title="Maintenance">🚧</a> <a href="#mentoring-Lane-G-Smith" title="Mentoring">🧑‍🏫</a> <a href="#projectManagement-Lane-G-Smith" title="Project Management">📆</a> <a href="#research-Lane-G-Smith" title="Research">🔬</a> <a href="https://github.com/Lane G Smith/AI-Personalities-React-App/pulls?q=is%3Apr+reviewed-by%3ALane-G-Smith" title="Reviewed Pull Requests">👀</a> <a href="#security-Lane-G-Smith" title="Security">🛡️</a> <a href="#talk-Lane-G-Smith" title="Talks">📢</a> <a href="https://github.com/Lane G Smith/AI-Personalities-React-App/commits?author=Lane-G-Smith" title="Tests">⚠️</a> <a href="#tool-Lane-G-Smith" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://akpi.is-a.dev/"><img src="https://avatars.githubusercontent.com/u/111009970?v=4?s=100" width="100px;" alt="akpi816218"/><br /><sub><b>akpi816218</b></sub></a><br /><a href="https://github.com/Lane G Smith/AI-Personalities-React-App/issues?q=author%3Aakpi816218" title="Bug reports">🐛</a> <a href="https://github.com/Lane G Smith/AI-Personalities-React-App/commits?author=akpi816218" title="Code">💻</a> <a href="#design-akpi816218" title="Design">🎨</a> <a href="https://github.com/Lane G Smith/AI-Personalities-React-App/commits?author=akpi816218" title="Documentation">📖</a> <a href="#ideas-akpi816218" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Lane G Smith/AI-Personalities-React-App/pulls?q=is%3Apr+reviewed-by%3Aakpi816218" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
   <tfoot>

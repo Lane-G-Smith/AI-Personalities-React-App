@@ -31,6 +31,13 @@
 				"test",
 				"tool"
 			]
+		},
+		{
+			"login": "akpi816218",
+			"name": "akpi816218",
+			"avatar_url": "https://avatars.githubusercontent.com/u/111009970?v=4",
+			"profile": "https://akpi.is-a.dev/",
+			"contributions": ["bug", "code", "design", "doc", "ideas", "review"]
 		}
 	],
 	"contributorsPerLine": 7,
