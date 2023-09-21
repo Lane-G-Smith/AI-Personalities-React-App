@@ -1,0 +1,39 @@
+{
+	"projectName": "AI-Personalities-React-App",
+	"projectOwner": "Lane G Smith",
+	"repoType": "github",
+	"repoHost": "https://github.com",
+	"files": ["README.md"],
+	"imageSize": 100,
+	"commit": true,
+	"commitConvention": "none",
+	"contributors": [
+		{
+			"login": "Lane-G-Smith",
+			"name": "Lane G Smith",
+			"avatar_url": "https://avatars.githubusercontent.com/u/108886772?v=4",
+			"profile": "https://github.com/Lane-G-Smith",
+			"contributions": [
+				"question",
+				"code",
+				"content",
+				"data",
+				"design",
+				"doc",
+				"ideas",
+				"maintenance",
+				"mentoring",
+				"projectManagement",
+				"research",
+				"review",
+				"security",
+				"talk",
+				"test",
+				"tool"
+			]
+		}
+	],
+	"contributorsPerLine": 7,
+	"linkToUsage": true
+}
+
