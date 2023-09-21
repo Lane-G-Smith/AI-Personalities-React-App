@@ -26,6 +26,7 @@
 		"npm-check-updates": "^16.14.4",
 		"prettier": "^3.0.3",
 		"tailwindcss": "^3.3.3",
+		"typescript": "^5.2.2",
 		"vite": "^4.4.9"
 	}
 }
