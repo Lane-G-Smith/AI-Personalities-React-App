@@ -10,14 +10,14 @@
         <br /><strong>OpenAI</strong>
     </td>
     <td align="center" height="108">
-      <p align="center">This project is a chat interface for interacting with different AI personalities using the OpenAI GPT-3 API. It's built with Vite, React (in JavaScript), and connects to a MongoDB database with an Express server.
+      <p align="center">This project is a chat interface for interacting with different AI personalities using the OpenAI GPT-4 API. It's built with Vite, React (in JavaScript), and connects to a MongoDB database with an Express server.
       </p>
      </td>
    </tr>
  </table>
  
 ## Getting Started
-First thing's first, clone this repository to your local system.
+First thing first, clone this repository to your local system.
 
 ```sh
 git clone https://github.com/Lane-G-Smith/AI-Personalities-React-App.git
@@ -42,17 +42,19 @@ npm run dev
 - public: This is where the static files are housed.
 
 ## Features
-- Interact with a varied range of AI personalities via chat interface.
+- Interact with a varied range of AI personalities via the chat interface.
 - The user's conversation history is stored in a MongoDB database.
 
 ## API Used
 OpenAI GPT-4
 
-## Tech Stack Used
+## Tech Stack And Tools
 - Vite: A build tool serving as a Front-end build tool that provides a smoother and leaner development experience.
 - React: A JavaScript library for building user interfaces.
 - MongoDB: A source-available cross-platform document-oriented database program, used for backend database.
 - Express: A back-end web application framework for Node.js, for building web applications and APIs.
+- Tailwind CSS: A utility-first CSS framework for rapidly building custom user interfaces.
+- OpenAI: A library providing convenient access to the OpenAI REST API from TypeScript or JavaScript.
 
 ## Contributions
 Pull requests are welcome. If you improve on this project, please feel free to share it back with the open-source community.
