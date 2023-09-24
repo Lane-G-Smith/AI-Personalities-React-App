@@ -9,9 +9,14 @@
 		"format": "prettier -w .",
 		"preview": "vite preview",
 		"upgrade": "ncu -u && npm i",
-		"watch": "tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+		"watch": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.4.2",
+		"@fortawesome/free-brands-svg-icons": "^6.4.2",
+		"@fortawesome/free-regular-svg-icons": "^6.4.2",
+		"@fortawesome/free-solid-svg-icons": "^6.4.2",
+		"@fortawesome/react-fontawesome": "^0.2.0",
 		"express": "^4.18.2",
 		"mongodb": "^6.1.0",
 		"mongoose": "^7.5.2",
