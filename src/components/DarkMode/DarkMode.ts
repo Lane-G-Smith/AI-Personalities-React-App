@@ -1,7 +1,9 @@
 // DARK MODE
 
 // attach event listener to theme toggle button / icon
-const themeToggle = document.getElementById('theme-toggle')!;
+const themeToggle = document.getElementById('theme-toggle');
+if (!themeToggle) throw new Error('Theme toggle button not found');
+
 themeToggle.addEventListener('click', () => {
 	themeSwitch();
 });
