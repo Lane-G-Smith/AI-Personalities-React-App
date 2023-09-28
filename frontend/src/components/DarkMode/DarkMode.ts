@@ -1,8 +1,7 @@
 // DARK MODE
 
 // attach event listener to theme toggle button / icon
-const themeToggle = document.getElementById('theme-toggle');
-if (!themeToggle) throw new Error('Theme toggle button not found');
+const themeToggle = document.getElementById('theme-toggle')!;
 
 themeToggle.addEventListener('click', () => {
 	themeSwitch();
@@ -15,17 +14,17 @@ const userTheme = localStorage.getItem('theme');
 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 // function to check for current theme settings
-const themeCheck = () => {
+function themeCheck() {
 	if (userTheme === 'dark' || (!userTheme && systemTheme)) {
 		document.documentElement.classList.add('dark');
 		themeToggle.classList.add('display-none');
 		return;
 	}
 	themeToggle.classList.add('display-none');
-};
+}
 
 // manual theme toggle switch
-const themeSwitch = () => {
+function themeSwitch() {
 	if (document.documentElement.classList.contains('dark')) {
 		document.documentElement.classList.remove('dark');
 		localStorage.setItem('theme', 'light');
@@ -34,4 +33,4 @@ const themeSwitch = () => {
 	localStorage.setItem('theme', 'dark');
 	// ? themeToggle is not a function
 	// themeToggle();
-};
+}

@@ -1,0 +1,50 @@
+{
+	"env": {
+		"browser": true,
+		"es2020": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react-hooks/recommended"
+	],
+	"ignorePatterns": ["dist", ".eslintrc.cjs"],
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["react-refresh"],
+	"root": true,
+	"rules": {
+		"arrow-body-style": [2, "as-needed"],
+		"arrow-parens": [2, "as-needed"],
+		"comma-dangle": [2, "never"],
+		"eqeqeq": 1,
+		"no-console": 1,
+		"no-const-assign": 2,
+		"no-undef": 1,
+		"no-unused-vars": 0,
+		"@typescript-eslint/no-unused-vars": 2,
+		"no-useless-concat": 2,
+		"no-var": 2,
+		"prefer-arrow-callback": 2,
+		"prefer-const": 2,
+		"prefer-destructuring": 2,
+		"prefer-numeric-literals": 2,
+		"prefer-promise-reject-errors": 2,
+		"prefer-spread": 2,
+		"prefer-template": 2,
+		"quotes": [
+			2,
+			"single",
+			{
+				"avoidEscape": true
+			}
+		],
+		"react-refresh/only-export-components": [
+			1,
+			{
+				"allowConstantExport": true
+			}
+		]
+	}
+}
