@@ -547,12 +547,8 @@ video {
   border-radius: 0.5rem;
 }
 
-.p-1 {
-  padding: 0.25rem;
-}
-
-.p-4 {
-  padding: 1rem;
+.p-5 {
+  padding: 1.25rem;
 }
 
 .text-sm {
@@ -604,29 +600,35 @@ body {
   min-height: 100vh;
 }
 
+.light-mode {
+  color: #242424;
+  background-color: white;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-button {
+#theme-toggle {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  -webkit-text-decoration: solid underline #646cff;
+          text-decoration: solid underline #646cff;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
-button:hover {
+#theme-toggle:hover {
   border-color: #646cff;
 }
 
-button:focus,
-button:focus-visible {
+#theme-toggle:focus,
+#theme-toggle:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -640,7 +642,7 @@ button:focus-visible {
     color: #747bff;
   }
 
-  button {
+  #theme-toggle {
     background-color: #f9f9f9;
   }
 }

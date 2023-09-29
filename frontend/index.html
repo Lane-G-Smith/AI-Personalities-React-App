@@ -6,37 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>AI Personalities React App</title>
 		<script src="./src/components/DarkMode/DarkMode.ts"></script>
-
-		<!--This is the styling for dark mode-->
-		 <style>
-			body{
-				padding: 25px;
-				background-color: white;
-				color: black;
-				font-size: 25px;
-			}
-
-			.dark-mode {
-				background-color: black;
-				color: white;
-			}
-		 </style>
-		
 	</head>
 	<body>
 		<div id="root"></div>
 		<script type="module" src="/src/main.tsx"></script>
-			
-		<!-- This is the button to turn on dark mode-->
-			<button onclick="darkModeFunction()">Toggle dark mode</button>
-
-		<!-- This is a script with a function that calls dark mode-->
-		<script>
-			function darkModeFunction(){
-				var element = document.body;
-				element.classList.toggle("dark-mode");
-			}
-		</script>
-
 	</body>
 </html>

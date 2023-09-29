@@ -1,11 +1,5 @@
 #
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 <h1 align="center">AI-Personalities-React-App</h1>
 <table align="center">
   <tr>
@@ -51,9 +45,9 @@ npm run dev
 
 ## Project Structure
 
-- src: This is where the react application lives.
-- backend: Express server which connects to MongoDB and provides API endpoints.
-- public: This is where the static files are housed.
+- `src/`: This is where the react application lives.
+- `backend/`: Express server which connects to MongoDB and provides API endpoints.
+- `public/`: This is where the static files are housed.
 
 ## Features
 
@@ -66,8 +60,9 @@ OpenAI GPT-4
 
 ## Tech Stack And Tools
 
-- Vite: A build tool serving as a Front-end build tool that provides a smoother and leaner development experience.
+- Vite: A build tool serving as a front-end build tool that provides a smoother and leaner development experience.
 - React: A JavaScript library for building user interfaces.
+- TypeScript: A superset of JavaScript which provides static typing and other code safety features.
 - MongoDB: A source-available cross-platform document-oriented database program, used for backend database.
 - Express: A back-end web application framework for Node.js, for building web applications and APIs.
 - Tailwind CSS: A utility-first CSS framework for rapidly building custom user interfaces.
@@ -87,6 +82,8 @@ MIT
 
 [Lane G Smith](https://github.com/Lane-G-Smith) — Lead Developer
 
-[Akhil Pillai](https://akpi.is-a.dev/) — Typings and more
+[Akhil Pillai](https://akpi.is-a.dev/) — Typings, frontend, and backend
+
+[@Sbrown19](https://github.com/Sbrown19) — Frontend
 
 If you encounter any problems, do not hesitate to open an issue or contact us directly. Have a great day!
