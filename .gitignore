@@ -1,3 +1,6 @@
+# Secrets
+.env
+
 # Logs
 logs
 *.log
@@ -7,7 +10,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+**/node_modules
 package-lock.json
 dist
 dist-ssr
