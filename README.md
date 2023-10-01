@@ -1,17 +1,13 @@
-#
+# AI-Personalities-React-App
 
 <h1 align="center">AI-Personalities-React-App</h1>
 <table align="center">
   <tr>
-    <td align="center" height="108" width="108">
-        <img     src=""
-        width="48"
-        height="48"
-        />
-        <br /><strong>OpenAI</strong>
+    <td align="center" height="108" width="108" style="font-weight: bold;">
+        OpenAI
     </td>
     <td align="center" height="108">
-      <p align="center">This project is a chat interface for interacting with different AI personalities using the OpenAI GPT-4 API. It's built with Vite, React (in JavaScript), and connects to a MongoDB database with an Express server.
+      <p align="center">This project is a chat interface for interacting with different AI personalities using the OpenAI GPT-4 API. It's built with Vite, React (using TypeScript), and connects to a MongoDB database with an Express server.
       </p>
      </td>
    </tr>
@@ -22,25 +18,24 @@
 First thing first, clone this repository to your local system.
 
 ```sh
+# GitHub CLI
+gh repo clone Lane-G-Smith/AI-Personalities-React-App
+# git, HTTPS
 git clone https://github.com/Lane-G-Smith/AI-Personalities-React-App.git
 ```
-
-## Installation
 
 This project uses node and npm. Go check them out if you don't have them locally installed.
 
 To install all the dependencies, navigate into your newly cloned directory and run this command:
 
 ```sh
-npm install
+npm i
 ```
-
-## Running the App
 
 Once everything is up and set up, you can run the project:
 
 ```sh
-npm run dev
+npm urn dev
 ```
 
 ## Project Structure
@@ -54,19 +49,15 @@ npm run dev
 - Interact with a varied range of AI personalities via the chat interface.
 - The user's conversation history is stored in a MongoDB database.
 
-## API Used
-
-OpenAI GPT-4
-
 ## Tech Stack And Tools
 
-- Vite: A build tool serving as a front-end build tool that provides a smoother and leaner development experience.
-- React: A JavaScript library for building user interfaces.
-- TypeScript: A superset of JavaScript which provides static typing and other code safety features.
-- MongoDB: A source-available cross-platform document-oriented database program, used for backend database.
-- Express: A back-end web application framework for Node.js, for building web applications and APIs.
-- Tailwind CSS: A utility-first CSS framework for rapidly building custom user interfaces.
-- OpenAI: A library providing convenient access to the OpenAI REST API from TypeScript or JavaScript.
+- [Vite](https://vitejs.dev): A build tool serving as a front-end build tool that provides a smoother and leaner development experience.
+- [React](https://reactjs.dev): A JavaScript library for building user interfaces.
+- [TypeScript](https://typescriptlang.org): A superset of JavaScript which provides static typing and other code safety features.
+- [MongoDB](https://mongodb.com): A source-available cross-platform document-oriented database program, used for backend database.
+- [Express.js](https://expressjs.com): A back-end web application framework for Node.js, for building web applications and APIs.
+- [Tailwind CSS](https://tailwindcss.com): A utility-first CSS framework for rapidly building custom user interfaces.
+- [OpenAI](https://openai.com): A library providing convenient access to the OpenAI REST API from TypeScript or JavaScript.
 
 ## Contributions
 
