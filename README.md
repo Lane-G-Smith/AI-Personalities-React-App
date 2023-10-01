@@ -38,6 +38,8 @@ Once everything is up and set up, you can run the project:
 npm urn dev
 ```
 
+For testing the backend server, we recommend using [**Y**et **A**nother **R**EST **C**lient](https://yet-another-rest-client.com).
+
 ## Project Structure
 
 - `src/`: This is where the react application lives.
