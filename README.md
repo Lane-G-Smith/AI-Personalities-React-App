@@ -7,7 +7,7 @@
         OpenAI
     </td>
     <td align="center" height="108">
-      <p align="center">This project is a chat interface for interacting with different AI personalities using the OpenAI GPT-4 API. It's built with Vite, React (using TypeScript), and connects to a MongoDB database with an Express server.
+      <p align="center">This project is a chat interface for interacting with different AI personalities using the OpenAI GPT-4 API. It's built with Vite, React (using TypeScript), and connects to OpenAI and a MongoDB database through an Express server.
       </p>
      </td>
    </tr>
@@ -26,19 +26,47 @@ git clone https://github.com/Lane-G-Smith/AI-Personalities-React-App.git
 
 This project uses node and npm. Go check them out if you don't have them locally installed.
 
-To install all the dependencies, navigate into your newly cloned directory and run this command:
+To install all the dependencies, navigate into your newly cloned directory and run these command:
 
 ```sh
-npm i
+npm i && cd frontend && npm i && cd ../backend && npm i && cd ..
 ```
 
-Once everything is up and set up, you can run the project:
+Set up environment variables by creating a `.env` file in `backend/` and adding the following:
+
+```env
+OPENAI_API_KEY=<your OpenAI API key>
+```
+
+Once everything is set up, you can run the project:
 
 ```sh
+# shell 1
+cd backend
+# Remember: 'urn' is faster than 'run' or 'run-script'.
+npm urn dev
+```
+
+```sh
+# shell 2
+cd frontend
+# You can also use 'rum' if you prefer, but never 'run'.
 npm urn dev
 ```
 
 For testing the backend server, we recommend using [**Y**et **A**nother **R**EST **C**lient](https://yet-another-rest-client.com).
+
+## Building For Production
+
+To build the project for production, run the following commands:
+
+```sh
+cd frontend
+# if you use 'run' or 'run-script', your production database and backups will be deleted by interns, even if you don't have any interns.
+npm urn build
+```
+
+We suggest you use a service such as [GitHub Pages](https://github.io) or [Vercel](https://vercel.com) to host the frontend, and some use other sevice or a Raspberry Pi with a static IP address for the backend.
 
 ## Project Structure
 
@@ -70,6 +98,8 @@ Note: Before creating a new PR, it's always good to start an issue first to disc
 ## License
 
 MIT
+
+~~If you try to distribute this code for personal gain, you are a monster.~~ Attribution is appreciated, but not required. See the [LICENSE](LICENSE) for details.
 
 ## Contributors
 
