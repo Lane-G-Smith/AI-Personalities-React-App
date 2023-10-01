@@ -1,4 +1,4 @@
-import DarkBtn from './components/DarkMode/DarkBtn';
+import DarkBtn from './components/DarkBtn';
 import './output.css';
 
 export default function App() {
