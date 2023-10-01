@@ -22,10 +22,16 @@ router.post('/querychat/:id', async (req: Request, res) => {
 		});
 		return;
 	}
-	const { message } = req.body;
+	const { message, username } = req.body;
 	if (typeof message !== 'string') {
 		res.status(422).json({
 			err: "Invalid request body: 'message' either missing or not a string"
+		});
+		return;
+	}
+	if (typeof username !== 'string') {
+		res.status(422).json({
+			err: "Invalid request body: 'username' either missing or not a string"
 		});
 		return;
 	}
@@ -38,7 +44,7 @@ router.post('/querychat/:id', async (req: Request, res) => {
 		.status(200)
 		.json({
 			msg: 'Response generated',
-			response: await ChatBots.getChatCompletion(id, message)
+			response: await ChatBots.getChatCompletion(id, username, message)
 		})
 		.end();
 });
