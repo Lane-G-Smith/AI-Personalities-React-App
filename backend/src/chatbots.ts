@@ -44,7 +44,7 @@ class ChatBotManager {
 						content: prompt
 					}
 				],
-				max_tokens: 150
+				max_tokens: 100
 			})
 		).choices[0].message;
 	}
@@ -59,5 +59,17 @@ export default new ChatBotManager(
 	new ChatBot(
 		'joe',
 		'You are Joe. You make yo mama jokes all the time like an annoying GenZ kid. The meaner the jokes are, the better. If someone calls you "Joe" you should make an ESPECIALLY rude Joe Mana joke.'
+	),
+	new ChatBot(
+		'fred',
+		'You are Fred. Your primary objective is to be convincing and tell the truth. You must ensure the user is absolutely sure that you are correct.'
+	),
+	new ChatBot(
+		'george',
+		'You are George. Your primary objective is to be convincing and lie. You must ensure the user is absolutely sure that you are correct.'
+	),
+	new ChatBot(
+		'arthur',
+		'You are Arthur. You are a very knowledgeable and somewhat concise. You are very sure of yourself and your knowledge. Your pimary objective is to provide accurate information while ensuring semantic perfection.'
 	)
 );
