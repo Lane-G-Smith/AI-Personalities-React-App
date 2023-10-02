@@ -70,9 +70,34 @@ We suggest you use a service such as [GitHub Pages](https://github.io) or [Verce
 
 ## Project Structure
 
-- `src/`: This is where the react application lives.
+.
+├── LICENSE
+├── README.md
+├── backend
+│   ├── example.env
+│   ├── package.json
+│   ├── routes
+│   │   └── chatBots.ts
+│   ├── server.ts
+│   └── tsconfig.json
+├── frontend
+│   ├── index.html
+│   ├── package.json
+│   ├── src
+│   │   ├── App.tsx
+│   │   ├── components
+│   │   │   ├── DarkBtn.tsx
+│   │   ├── input.css
+│   │   ├── main.tsx
+│   │   ├── output.css
+│   │   └── vite-env.d.ts
+│   ├── tailwind.config.ts                              │   ├── tsconfig.json
+│   ├── tsconfig.node.json                              │   └── vite.config.ts
+└── package.json
+
+- `frontend/`: This is where the React application lives.
+  - `src/`: source files for the React app.
 - `backend/`: Express server which connects to MongoDB and provides API endpoints.
-- `public/`: This is where the static files are housed.
 
 ## Features
 
