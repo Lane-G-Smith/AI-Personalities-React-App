@@ -70,7 +70,8 @@ We suggest you use a service such as [GitHub Pages](https://github.io) or [Verce
 
 ## Project Structure
 
-.
+```
+/
 ├── LICENSE
 ├── README.md
 ├── backend
@@ -94,9 +95,9 @@ We suggest you use a service such as [GitHub Pages](https://github.io) or [Verce
 │   ├── tailwind.config.ts                              │   ├── tsconfig.json
 │   ├── tsconfig.node.json                              │   └── vite.config.ts
 └── package.json
+```
 
 - `frontend/`: This is where the React application lives.
-  - `src/`: source files for the React app.
 - `backend/`: Express server which connects to MongoDB and provides API endpoints.
 
 ## Features
