@@ -1,6 +1,6 @@
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 export default function DarkBtn() {
 	// Will always run on page load
@@ -22,15 +22,15 @@ export default function DarkBtn() {
 	// Will run on page load every time, aka also on every theme change
 	// Now that we know which theme to use, use it
 	darkTheme
-		? document.body.classList.remove('light-mode')
-		: document.body.classList.add('light-mode');
+		? document.documentElement.classList.add('dark')
+		: document.documentElement.classList.remove('dark');
 
 	return (
 		<button
 			id="theme-toggle"
 			onClick={() => toggleTheme(darkTheme, setTheme)}
 			aria-label="Dark mode toggle"
-			className="p-5 my-2 flex text-blue-700 dark:bg-red-500 hover:scale-110 duration-100 hover:duration-100 rounded-lg text-sm font-bold fa-large fa-moon"
+			className="p-5 my-2 bg-slate-500 text-yellow-400 dark:text-amber-500 hover:scale-110 duration-100 hover:duration-100 rounded-lg text-sm font-bold fa-large "
 		>
 			<FontAwesomeIcon icon={darkTheme ? faMoon : faSun} />
 		</button>
@@ -39,7 +39,7 @@ export default function DarkBtn() {
 
 function toggleTheme(
 	isDark: boolean,
-	setDarkMode: React.Dispatch<React.SetStateAction<boolean>>
+	setDarkMode: Dispatch<SetStateAction<boolean>>
 ) {
 	isDark = !isDark;
 	localStorage.setItem('theme', isDark ? 'dark' : 'light');

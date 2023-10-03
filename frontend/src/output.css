@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: currentColor;
+  border-color: #e5e7eb;
   /* 2 */
 }
 
@@ -534,6 +534,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -543,8 +547,50 @@ video {
   display: flex;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-emerald-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(16 185 129 / var(--tw-border-opacity));
+}
+
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .p-5 {
@@ -558,6 +604,11 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.text-yellow-400 {
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
 }
 
 .duration-100 {
@@ -580,24 +631,17 @@ body {
   font-weight: 400;
   text-align: center;
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 100vw;
   min-height: 100vh;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
-
-.light-mode {
-  color: #242424;
-  background-color: white;
 }
 
 h1 {
@@ -633,7 +677,7 @@ h1 {
   }
 
   100% {
-    transform: scale(1.125);
+    transform: scale(1.0625);
   }
 }
 
@@ -641,6 +685,10 @@ h1 {
 #theme-toggle:active,
 #theme-toggle:focus-visible {
   outline: none;
+}
+
+.hover\:w-1\/2:hover {
+  width: 50%;
 }
 
 .hover\:scale-110:hover {
@@ -651,4 +699,19 @@ h1 {
 
 .hover\:duration-100:hover {
   transition-duration: 100ms;
+}
+
+:is(.dark .dark\:bg-slate-600) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-slate-500) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:text-amber-500) {
+  --tw-text-opacity: 1;
+  color: rgb(245 158 11 / var(--tw-text-opacity));
 }
