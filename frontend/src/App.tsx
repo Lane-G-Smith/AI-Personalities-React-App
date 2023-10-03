@@ -1,5 +1,5 @@
 import DarkBtn from './components/DarkBtn';
-import './output.css';
+import '../src/output.css';
 
 export default function App() {
 	return (

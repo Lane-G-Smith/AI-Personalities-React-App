@@ -3,8 +3,7 @@ import { type Config } from 'tailwindcss';
 export default {
 	content: ['./src/**/*.{html,js,jsx,tsx}'],
 	theme: {
-		extend: {},
-		colors: {
+		extend: {colors: {
 			'heavy-metal': {
 				50: '#f6f7f6',
 				100: '#e3e6e1',
@@ -18,7 +17,7 @@ export default {
 				900: '#2d312b',
 				950: '#181c17'
 			}
-		}
+		}}
 	},
 	plugins: []
 } satisfies Config;
