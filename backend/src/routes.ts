@@ -1,5 +1,12 @@
 import express, { Request } from 'express';
-import ChatBots from './chatbots';
+import ChatBots from '../../common/chatBots';
+import ChatBotManager from '../../common/ChatBotManager';
+import OpenAI from 'openai';
+
+const bots = new ChatBotManager(
+	new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
+	...ChatBots
+);
 
 const router = express.Router();
 
@@ -16,7 +23,7 @@ router.post('/querychat/:id', async (req: Request, res) => {
 		return;
 	}
 	const { id } = req.params;
-	if (!ChatBots.hasBot(id)) {
+	if (!bots.hasBot(id)) {
 		res.status(404).json({
 			err: 'Chatbot not found'
 		});
@@ -44,7 +51,7 @@ router.post('/querychat/:id', async (req: Request, res) => {
 		.status(200)
 		.json({
 			msg: 'Response generated',
-			response: await ChatBots.getChatCompletion(id, username, message)
+			response: await bots.getChatCompletion(id, username, message)
 		})
 		.end();
 });
