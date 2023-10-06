@@ -121,6 +121,8 @@ Pull requests are welcome. If you improve on this project, please feel free to s
 
 Note: Before creating a new PR, it's always good to start an issue first to discuss potential changes/additions.
 
+We'd love to chat on [Discord](https://discord.gg/DCznYuU4Ms), so feel free to join!
+
 ## License
 
 MIT
