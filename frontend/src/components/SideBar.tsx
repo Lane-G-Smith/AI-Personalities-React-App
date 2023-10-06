@@ -11,16 +11,17 @@ export default function SideBar({ currentBot, setCurrentBot }: { currentBot: Cha
 	return (
 		<section
 			id="sidebar"
-			className="flex flex-col w-1/4 min-h-screen h-screen m-0 p-0 border-solid border-2 border-emerald-500"
+			className="flex flex-col w-1/5 min-h-screen h-screen m-0 p-0 border-solid border-2 border-emerald-500"
 		>
 			<div id="topbar" className="flex-auto flex-grow-0">
-				<input
+				{/* Input element for name, may be useful in future */}
+				{/* <input
 					type="text"
 					name="name"
 					className="flex-shrink m-2 p-0.5 px-2 border-none rounded-md max-w-xs w-48"
 					placeholder="Name"
 					autoComplete="name"
-				/>
+				/> */}
 				<DarkBtn />
 			</div>
 			{...botBars}
