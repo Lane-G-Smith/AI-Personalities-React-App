@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import { ChatBot } from '../../../common/ChatBot';
 import Tippy from '@tippyjs/react';
+import Tooltip from './Tooltip';
 
 export default function BotSidebarTab({
 	selected,
@@ -12,7 +13,7 @@ export default function BotSidebarTab({
 	bot: ChatBot;
 }) {
 	return (
-		<Tippy content={<p className='py-4 px-2 rounded-lg bg-black/75 text-white'>{bot.about}</p>}>
+		<Tippy content={<Tooltip>{bot.about}</Tooltip>}>
 			<div
 				className={`bot-sidebar-tab flex flex-grow-0 content-center items-center flex-wrap ${selected
 					? 'bg-slate-400 dark:bg-slate-500'
