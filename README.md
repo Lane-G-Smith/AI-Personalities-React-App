@@ -1,6 +1,5 @@
 # AI-Personalities-React-App
 
-<h1 align="center">AI-Personalities-React-App</h1>
 <table align="center">
   <tr>
     <td align="center" height="108" width="108" style="font-weight: bold;">
