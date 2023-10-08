@@ -28,16 +28,22 @@ export default function DarkBtn() {
 		: document.documentElement.classList.remove('dark');
 
 	return (
-		<Tippy content={<Tooltip>Toggle between the dark and light themes</Tooltip>}>
-			<button
-				id="theme-toggle"
-				onClick={() => toggleTheme(darkTheme, setTheme)}
-				aria-label="Dark mode toggle"
-				className="p-1 my-3 bg-slate-500 text-yellow-400 dark:text-amber-500 hover:scale-110 duration-100 hover:duration-100 rounded-lg text-xs font-bold fa-large"
+		/**
+			<Tippy
+				content={<Tooltip>Toggle between the dark and light themes</Tooltip>}
 			>
-				<FontAwesomeIcon icon={darkTheme ? faMoon : faSun} />
-			</button>
-		</Tippy>
+		*/
+		<button
+			id="theme-toggle"
+			onClick={() => toggleTheme(darkTheme, setTheme)}
+			aria-label="Dark mode toggle"
+			className="p-1 my-3 bg-slate-500 text-yellow-400 dark:text-amber-500 hover:scale-110 duration-100 hover:duration-100 rounded-lg text-xs font-bold fa-large"
+		>
+			<FontAwesomeIcon icon={darkTheme ? faMoon : faSun} />
+		</button>
+		/**
+			</Tippy>
+		*/
 	);
 }
 

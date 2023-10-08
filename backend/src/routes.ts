@@ -12,7 +12,7 @@ const router = express.Router();
 
 // get all chatbots
 router.get('/', async (_req: Request, res) => {
-	res.json({ msg: 'Get all chatbots' });
+	res.json({ all: ChatBots.map(c => c.name) });
 });
 
 router.post('/querychat/:id', async (req: Request, res) => {
@@ -42,11 +42,6 @@ router.post('/querychat/:id', async (req: Request, res) => {
 		});
 		return;
 	}
-	/**
-		res.status(202).json({
-			msg: 'Accepted, generating response'
-		});
-	*/
 	res
 		.status(200)
 		.json({

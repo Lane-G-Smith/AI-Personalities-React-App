@@ -4,10 +4,13 @@ import { chatBots } from '../../../common/chatBots';
 import BotSidebarTab from './BotSidebarTab';
 import DarkBtn from './DarkBtn';
 
-export default function SideBar({ currentBot, setCurrentBot }: { currentBot: ChatBot, setCurrentBot: Dispatch<SetStateAction<ChatBot>> }) {
-	const botBars = [];
-	for (const b of chatBots)
-		botBars.push(<BotSidebarTab setSelected={setCurrentBot} selected={currentBot.name === b.name} bot={b} />);
+export default function SideBar({
+	currentBot,
+	setCurrentBot
+}: {
+	currentBot: ChatBot;
+	setCurrentBot: Dispatch<SetStateAction<ChatBot>>;
+}) {
 	return (
 		<section
 			id="sidebar"
@@ -24,7 +27,8 @@ export default function SideBar({ currentBot, setCurrentBot }: { currentBot: Cha
 				/> */}
 				<DarkBtn />
 			</div>
-			{...botBars}
+
+			{...chatBots.map(bot => <BotSidebarTab setSelected={setCurrentBot} selected={currentBot.name === bot.name} bot={bot} />)}
 		</section>
 	);
 }

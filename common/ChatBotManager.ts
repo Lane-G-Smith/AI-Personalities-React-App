@@ -34,7 +34,7 @@ export default class ChatBotManager {
 							content: prompt
 						}
 					],
-					max_tokens: 100
+					max_tokens: 75
 				})
 			).choices[0].message.content ?? 'No response'
 		);
