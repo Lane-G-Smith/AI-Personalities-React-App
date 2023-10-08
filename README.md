@@ -1,6 +1,5 @@
 # AI-Personalities-React-App
 
-<h1 align="center">AI-Personalities-React-App</h1>
 <table align="center">
   <tr>
     <td align="center" height="108" width="108" style="font-weight: bold;">
@@ -120,6 +119,8 @@ We suggest you use a service such as [GitHub Pages](https://github.io) or [Verce
 Pull requests are welcome. If you improve on this project, please feel free to share it back with the open-source community.
 
 Note: Before creating a new PR, it's always good to start an issue first to discuss potential changes/additions.
+
+We'd love to chat on [Discord](https://discord.gg/DCznYuU4Ms), so feel free to join!
 
 ## License
 
