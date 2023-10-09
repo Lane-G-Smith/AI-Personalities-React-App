@@ -1,8 +1,7 @@
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Tippy from '@tippyjs/react';
-import { Dispatch, SetStateAction, useState } from 'react';
-import Tooltip from './Tooltip';
+import { ReactStateFunction } from '../types';
+import { useState } from 'react';
 
 export default function DarkBtn() {
 	// Will always run on page load
@@ -49,7 +48,7 @@ export default function DarkBtn() {
 
 function toggleTheme(
 	isDark: boolean,
-	setDarkMode: Dispatch<SetStateAction<boolean>>
+	setDarkMode: ReactStateFunction<boolean>
 ) {
 	isDark = !isDark;
 	localStorage.setItem('theme', isDark ? 'dark' : 'light');

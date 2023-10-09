@@ -13,6 +13,13 @@ export class Message {
 		this.content = content;
 		this.timestamp = timestamp;
 	}
+	static fromJSON(json: {
+		role: MessageAuthorRole;
+		content: string;
+		timestamp: number;
+	}): Message {
+		return new Message(json.role, json.content, json.timestamp);
+	}
 }
 
 export default Message;

@@ -1,20 +1,20 @@
-import { Dispatch, SetStateAction } from 'react';
 import { ChatBot } from '../../../common/ChatBot';
 import { chatBots } from '../../../common/chatBots';
 import BotSidebarTab from './BotSidebarTab';
 import DarkBtn from './DarkBtn';
+import { ReactStateFunction } from '../types';
 
 export default function SideBar({
 	currentBot,
 	setCurrentBot
 }: {
 	currentBot: ChatBot;
-	setCurrentBot: Dispatch<SetStateAction<ChatBot>>;
+	setCurrentBot: ReactStateFunction<ChatBot>;
 }) {
 	return (
 		<section
 			id="sidebar"
-			className="flex flex-grow-0 flex-col w-1/5 min-h-screen h-screen m-0 p-0 border-solid border-2 border-emerald-500"
+			className="flex flex-grow-0 flex-col w-1/5 min-h-screen h-screen m-0 p-2 border-solid border-2 border-emerald-500"
 		>
 			<div id="topbar" className="flex-auto flex-grow-0">
 				{/* Input element for name, may be useful in future */}
