@@ -18,7 +18,7 @@
 	},
 	"scripts": {
 		"format": "prettier -w .",
-		"start": "tsx start.tsx",
+		"dev": "tsx dev.ts",
 		"upgrade": "ncu -u && npm i && cd frontend && ncu -u && npm i && cd ../backend && ncu -u && npm i && cd .."
 	}
 }
