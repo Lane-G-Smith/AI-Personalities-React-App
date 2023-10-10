@@ -47,7 +47,7 @@ export default function SendBar({
 			input.disabled = true;
 
 			const res = await fetch(
-				`http://localhost:8000/api/querychat/${currentBot.name.toLowerCase()}`,
+				`http://localhost:8000/api/bots/${currentBot.name.toLowerCase()}/chat`,
 				{
 					headers: [['Content-Type', 'application/json']],
 					method: 'POST',

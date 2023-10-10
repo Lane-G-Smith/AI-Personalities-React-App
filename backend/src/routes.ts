@@ -15,7 +15,7 @@ router.get('/', async (_req: Request, res) => {
 	res.json({ all: ChatBots.map(c => c.name) });
 });
 
-router.post('/querychat/:id', async (req: Request, res) => {
+router.post('/bots/:id/chat', async (req: Request, res) => {
 	res.header('Content-Type', 'application/json');
 	res.header('Access-Control-Allow-Origin', '*');
 
