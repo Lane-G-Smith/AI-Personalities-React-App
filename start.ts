@@ -3,7 +3,7 @@ import { stdout } from 'process';
 
 const processes = [
 	spawn('npm start', { shell: true, cwd: 'backend' }),
-	spawn('npm urn build && npm urn preview', { shell: true, cwd: 'frontend' })
+	spawn('npm urn dev', { shell: true, cwd: 'frontend' })
 ];
 for (const p of processes) {
 	p.stdout.on('data', data => {

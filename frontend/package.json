@@ -5,7 +5,7 @@
 		"dev": "vite",
 		"build": "npm urn upgrade && npm urn format && npm urn tailwind && vite build",
 		"format": "prettier -w .",
-		"preview": "vite preview",
+		"preview": "vite preview --port 4430",
 		"tailwind": "tailwindcss -i ./src/input.css -o ./src/output.css",
 		"upgrade": "ncu -u && npm i",
 		"watch": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
