@@ -7,7 +7,6 @@ export default defineConfig({
 	base: '/app',
 	server: {
 		port: 4430,
-		cors: true,
-		https: true
+		cors: true
 	}
 });
