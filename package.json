@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"type": "module",
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^6.7.4",
+		"@typescript-eslint/eslint-plugin": "^6.7.5",
 		"eslint": "^8.51.0",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.3",
@@ -19,6 +19,6 @@
 	"scripts": {
 		"format": "prettier -w .",
 		"start": "tsx start.tsx",
-		"upgrade": "ncu -u && npm i"
+		"upgrade": "ncu -u && npm i && cd frontend && ncu -u && npm i && cd ../backend && ncu -u && npm i && cd .."
 	}
 }

@@ -18,17 +18,24 @@ export default function SideBar({
 		>
 			<div id="topbar" className="flex-auto flex-grow-0">
 				{/* Input element for name, may be useful in future */}
-				{/* <input
+				<input
 					type="text"
 					name="name"
+					id="name"
 					className="flex-shrink m-2 p-0.5 px-2 border-none rounded-md max-w-xs w-48"
 					placeholder="Name"
 					autoComplete="name"
-				/> */}
+				/>
 				<DarkBtn />
 			</div>
 
-			{...chatBots.map(bot => <BotSidebarTab setSelected={setCurrentBot} selected={currentBot.name === bot.name} bot={bot} />)}
+			{...chatBots.map(bot => (
+				<BotSidebarTab
+					setSelected={setCurrentBot}
+					selected={currentBot.name === bot.name}
+					bot={bot}
+				/>
+			))}
 		</section>
 	);
 }

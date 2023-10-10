@@ -6,19 +6,27 @@ export enum MessageAuthorRole {
 
 export class Message {
 	role: MessageAuthorRole;
+	author: string;
 	content: string;
 	timestamp: number;
-	constructor(role: MessageAuthorRole, content: string, timestamp: number) {
+	constructor(
+		role: MessageAuthorRole,
+		author: string,
+		content: string,
+		timestamp: number
+	) {
 		this.role = role;
+		this.author = author;
 		this.content = content;
 		this.timestamp = timestamp;
 	}
 	static fromJSON(json: {
 		role: MessageAuthorRole;
+		author: string;
 		content: string;
 		timestamp: number;
 	}): Message {
-		return new Message(json.role, json.content, json.timestamp);
+		return new Message(json.role, json.author, json.content, json.timestamp);
 	}
 }
 

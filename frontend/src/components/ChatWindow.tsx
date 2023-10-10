@@ -5,7 +5,14 @@ import SendBar from './SendBar';
 import MessageBox from './MessageBox';
 
 export default function ChatWindow({ currentBot }: { currentBot: ChatBot }) {
-	const [messages, setMessages] = useState<Message[]>([new Message(MessageAuthorRole.System, 'System Message', Date.now())]);
+	const [messages, setMessages] = useState<Message[]>([
+		new Message(
+			MessageAuthorRole.System,
+			'System',
+			'System Message',
+			Date.now()
+		)
+	]);
 
 	return (
 		<div className="border-amber-600 min-h-screen h-screen flex flex-grow flex-col items-stretch place-items-end justify-end flex-nowrap">
@@ -13,9 +20,13 @@ export default function ChatWindow({ currentBot }: { currentBot: ChatBot }) {
 				id="messages"
 				className="border-amber-600 h-max p-8 flex-grow-0 overflow-x-auto"
 			>
-				{...messages.map(message => <MessageBox botName={currentBot.name} message={message} />)}
+				{...messages.map(message => <MessageBox message={message} />)}
 			</div>
-			<SendBar currentBot={currentBot} messages={messages} setMessages={setMessages} />
+			<SendBar
+				currentBot={currentBot}
+				messages={messages}
+				setMessages={setMessages}
+			/>
 		</div>
 	);
 }

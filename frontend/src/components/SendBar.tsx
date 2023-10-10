@@ -13,17 +13,68 @@ export default function SendBar({
 	messages: Message[];
 	setMessages: ReactStateFunction<Message[]>;
 }) {
-	function createMessage() {
+	async function createMessage() {
 		{
 			const input = document.getElementById('message')! as HTMLInputElement,
-				{ value } = input;
-
-			input.value = '';
+				nameInput = document.getElementById('name') as HTMLInputElement,
+				{ value } = input,
+				{ value: username } = nameInput;
 			if (value.replace(/\s/g, '') === '' || value.trim() === '') return;
+			if (
+				!username ||
+				username.replace(/\s/g, '') === '' ||
+				username.trim() === ''
+			) {
+				alert('Please enter a username.');
+				nameInput.focus();
+				return;
+			}
+
+			const usermsg = new Message(
+				MessageAuthorRole.User,
+				'You',
+				value,
+				Date.now()
+			);
+			setMessages([...messages, usermsg]);
+			input.value = '';
+
+			document.getElementById('messages')!.scroll({
+				top: document.getElementById('messages')!.scrollHeight,
+				behavior: 'smooth'
+			});
+
+			input.disabled = true;
+
+			const res = await fetch(
+				`http://localhost:8000/api/querychat/${currentBot.name.toLowerCase()}`,
+				{
+					headers: [['Content-Type', 'application/json']],
+					method: 'POST',
+					body: JSON.stringify({ message: value, username })
+				}
+			);
+			const data:
+				| { err: string; msg?: undefined; response?: undefined }
+				| { err?: undefined; msg: string; response: string } = await res.json();
+
+			if (data.err || !data.response) {
+				console.error(data.err);
+				alert(
+					'An error occurred while sending your message. Please try again later.'
+				);
+				return;
+			}
 
 			setMessages([
 				...messages,
-				new Message(MessageAuthorRole.User, value, Date.now())
+				usermsg,
+				new Message(
+					MessageAuthorRole.ChatBot,
+					currentBot.name,
+					data.response,
+					Date.now()
+				)
 			]);
 
 			document.getElementById('messages')!.scroll({
@@ -31,7 +82,8 @@ export default function SendBar({
 				behavior: 'smooth'
 			});
 
-			// fetch(`http://localhost:8000/api/bots/${currentBot.name}/send`)
+			input.focus();
+			input.disabled = false;
 		}
 	}
 
