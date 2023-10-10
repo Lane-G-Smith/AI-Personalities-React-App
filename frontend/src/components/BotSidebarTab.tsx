@@ -4,7 +4,7 @@ import Tippy from '@tippyjs/react';
 import Tooltip from './Tooltip';
 import 'tippy.js/animations/shift-away-extreme.css';
 import 'tippy.js/themes/material.css';
-
+import { ReactStateFunction } from '../types';
 
 export default function BotSidebarTab({
 	selected,
@@ -12,16 +12,22 @@ export default function BotSidebarTab({
 	bot
 }: {
 	selected: boolean;
-	setSelected: Dispatch<SetStateAction<ChatBot>>;
+	setSelected: ReactStateFunction<ChatBot>;
 	bot: ChatBot;
 }) {
 	return (
-		<Tippy animation='shift-away-extreme' content={<Tooltip>{bot.about}</Tooltip>} delay={[500, 250]} theme='material'>
+		<Tippy
+			animation="shift-away-extreme"
+			content={<Tooltip>{bot.about}</Tooltip>}
+			delay={[500, 250]}
+			theme="material"
+		>
 			<div
-				className={`bot-sidebar-tab flex flex-grow-0 content-center items-center flex-wrap ${selected
-					? 'bg-slate-400 dark:bg-slate-500'
-					: 'bg-slate-300 dark:bg-slate-600'
-					} my-2 mx-0.5 rounded-xl flex-row p-3 max-h-16 hover:cursor-pointer`}
+				className={`bot-sidebar-tab flex flex-grow-0 content-center items-center flex-wrap ${
+					selected
+						? 'bg-slate-400 dark:bg-slate-500'
+						: 'bg-slate-300 dark:bg-slate-600'
+				} my-2 mx-0 rounded-xl flex-row p-3 max-h-16 hover:cursor-pointer`}
 				onClick={() => {
 					!selected && setSelected(bot);
 				}}

@@ -1,11 +1,13 @@
 import 'dotenv/config';
 import express, { Request } from 'express';
 import chatbotRoutes from './routes';
+import cors from 'cors';
 
 // express app
 const app = express();
 
 // middleware
+app.use(cors());
 app.use(express.json());
 app.use((req: Request, _res, next) => {
 	console.log(req.method, req.path, req.body);

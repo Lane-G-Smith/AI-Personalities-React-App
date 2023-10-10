@@ -6,6 +6,7 @@ export default defineConfig({
 	plugins: [react()],
 	base: '/app',
 	server: {
-		port: 4430
+		port: 4430,
+		cors: true
 	}
 });

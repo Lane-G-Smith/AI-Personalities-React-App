@@ -15,7 +15,10 @@ router.get('/', async (_req: Request, res) => {
 	res.json({ all: ChatBots.map(c => c.name) });
 });
 
-router.post('/querychat/:id', async (req: Request, res) => {
+router.post('/bots/:id/chat', async (req: Request, res) => {
+	res.header('Content-Type', 'application/json');
+	res.header('Access-Control-Allow-Origin', '*');
+
 	if (req.headers['content-type']?.toLowerCase() !== 'application/json') {
 		res.status(415).json({
 			err: 'Invalid content type'
@@ -51,12 +54,10 @@ router.post('/querychat/:id', async (req: Request, res) => {
 		.end();
 });
 
-// get single chatbot
-/**
-	router.get('/:id', (req: Request, res) => {
-		res.json({ msg: `Get single chatbot, ID: ${req.params.id}` });
-	});
-*/
+// get all chatbots
+router.get('/', (req: Request, res) => {
+	res.json([ChatBots.map(c => c.name)]);
+});
 
 // Post new chatbot
 /**
