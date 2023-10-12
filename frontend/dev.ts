@@ -2,8 +2,8 @@ import { spawn } from 'child_process';
 import { stdout } from 'process';
 
 const processes = [
-	spawn('npm urn backend:dev', { shell: true }),
-	spawn('npm urn frontend:dev', { shell: true })
+	spawn('npm urn tailwind:watch', { shell: true }),
+	spawn('npm urn vite:dev', { shell: true })
 ];
 for (const p of processes) {
 	p.stdout.on('data', data => {

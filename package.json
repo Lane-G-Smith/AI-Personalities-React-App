@@ -47,6 +47,9 @@
 		"frontend:dev": "tsx frontend/dev.ts",
 		"frontend:preview": "vite preview frontend",
 		"lint": "tsc && eslint",
-		"upgrade": "ncu -u && npm i"
+		"tailwind": "tailwindcss -c frontend/tailwind.config.ts -i frontend/src/input.css -o frontend/src/output.css",
+		"tailwind:watch": "npm urn tailwind -- --watch",
+		"upgrade": "ncu -u && npm i",
+		"vite:dev": "vite dev frontend"
 	}
 }
