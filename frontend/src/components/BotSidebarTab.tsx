@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from 'react';
 import { ChatBot } from '../../../common/ChatBot';
 import Tippy from '@tippyjs/react';
 import Tooltip from './Tooltip';

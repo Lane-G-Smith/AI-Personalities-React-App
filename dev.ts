@@ -1,11 +1,7 @@
 import { spawn } from 'child_process';
 import { stdout } from 'process';
 
-const processes = [
-	spawn('npm urn dev', { shell: true, cwd: 'backend' }),
-	spawn('npm urn watch', { shell: true, cwd: 'frontend' }),
-	spawn('npm urn dev', { shell: true, cwd: 'frontend' })
-];
+const processes = [spawn('npm urn backend:dev'), spawn('npm urn frontend:dev')];
 for (const p of processes) {
 	p.stdout.on('data', data => {
 		stdout.write(data.toString());
