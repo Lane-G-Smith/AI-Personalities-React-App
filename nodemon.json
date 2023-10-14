@@ -3,5 +3,5 @@
 		"ts": "tsx"
 	},
 	"ext": "ts,json",
-	"watch": "."
+	"watch": "backend"
 }

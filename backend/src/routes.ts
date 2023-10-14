@@ -55,7 +55,7 @@ router.post('/bots/:id/chat', async (req: Request, res) => {
 });
 
 // get all chatbots
-router.get('/', (req: Request, res) => {
+router.get('/', (_req: Request, res) => {
 	res.json([ChatBots.map(c => c.name)]);
 });
 

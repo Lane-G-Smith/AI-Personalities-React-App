@@ -1,18 +1,20 @@
 # AI-Personalities-React-App
 
 <table align="center">
-  <tr>
-    <td align="center" height="108" width="108" style="font-weight: bold;">
-        OpenAI
-    </td>
-    <td align="center" height="108">
-      <p align="center">This project is a chat interface for interacting with different AI personalities using the OpenAI GPT-4 API. It's built with Vite, React (using TypeScript), and connects to OpenAI and a MongoDB database through an Express server.
-      </p>
-     </td>
-   </tr>
- </table>
+	<tr>
+		<td align="center" height="108" width="108" style="font-weight: bold;">
+			OpenAI
+		</td>
+		<td align="center" height="108">
+			<p align="center">This project is a chat interface for interacting with different AI personalities using the OpenAI GPT-4 API. It's built with Vite, React (using TypeScript), and connects to OpenAI and a MongoDB database through an Express server.
+		</p>
+	</td>
+	</tr>
+</table>
 
 ## Getting Started
+
+This project uses node and npm. Go check them out if you don't have them locally installed.
 
 First thing first, clone this repository to your local system.
 
@@ -23,45 +25,31 @@ gh repo clone Lane-G-Smith/AI-Personalities-React-App
 git clone https://github.com/Lane-G-Smith/AI-Personalities-React-App.git
 ```
 
-This project uses node and npm. Go check them out if you don't have them locally installed.
-
-To install all the dependencies, navigate into your newly cloned directory and run these command:
-
-```sh
-npm i && cd frontend && npm i && cd ../backend && npm i && cd ..
-```
-
-Set up environment variables by creating a `.env` file in `backend/` and adding the following:
+Set up environment variables by creating a `.env` file in the root directory and adding the following:
 
 ```env
-OPENAI_API_KEY=<your OpenAI API key>
+OPENAI_API_KEY=sk-************************************
 ```
 
-Once everything is set up, you can run the project:
+Once everything is set up, you can run the project in development mode:
 
 ```sh
 # shell 1
-cd backend
 # Remember: 'urn' is faster than 'run' or 'run-script'.
-npm urn dev
-```
-
-```sh
+npm urn backend:dev
 # shell 2
-cd frontend
 # You can also use 'rum' if you prefer, but never 'run'.
-npm urn dev
+npm urn frontend:dev
 ```
 
 For testing the backend server, we recommend using [**Y**et **A**nother **R**EST **C**lient](https://yet-another-rest-client.com).
 
 ## Building For Production
 
-To build the project for production, run the following commands:
+To build the project for production, run the following command:
 
 ```sh
-cd frontend
-# if you use 'run' or 'run-script', your production database and backups will be deleted by interns, even if you don't have any interns.
+# if you use 'npm run' or 'npm run-script', your production database and backups will be deleted by interns, even if you don't have any interns.
 npm urn build
 ```
 
@@ -126,13 +114,13 @@ We'd love to chat on [Discord](https://discord.gg/DCznYuU4Ms), so feel free to j
 
 MIT
 
-~~If you try to distribute this code for personal gain, you are a monster.~~ Attribution is appreciated, but not required. See the [LICENSE](LICENSE) for details.
+Attribution is appreciated, but not required. See the [LICENSE](LICENSE) for details.
 
 ## Contributors
 
-[Lane G Smith](https://github.com/Lane-G-Smith) — Lead Developer
+[Akhil Pillai](https://akpi.is-a.dev/) — Lead developer, typings, frontend, and backend
 
-[Akhil Pillai](https://akpi.is-a.dev/) — Typings, frontend, and backend
+[Lane G Smith](https://github.com/Lane-G-Smith) — Project designer, backend,
 
 [@Sbrown19](https://github.com/Sbrown19) — Frontend
 
