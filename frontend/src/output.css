@@ -674,10 +674,6 @@ video {
   align-self: stretch;
 }
 
-.overflow-x-auto {
-  overflow-x: auto;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
