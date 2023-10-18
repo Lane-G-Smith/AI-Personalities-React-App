@@ -49,14 +49,16 @@ h1 {
 	transition: border-color 0.25s;
 }
 
-#theme-toggle:hover {
-	border-color: #646cff;
-	--duration: 1.25s;
-	animation: button-pulse var(--duration) infinite alternate linear;
-	-webkit-animation: button-pulse var(--duration) infinite alternate linear;
-	-moz-animation: button-pulse var(--duration) infinite alternate linear;
-	-o-animation: button-pulse var(--duration) infinite alternate linear;
-}
+/**
+	#theme-toggle:hover,
+	#theme-toggle:focus {
+		--duration: 1.25s;
+		animation: button-pulse var(--duration) infinite alternate linear;
+		-webkit-animation: button-pulse var(--duration) infinite alternate linear;
+		-moz-animation: button-pulse var(--duration) infinite alternate linear;
+		-o-animation: button-pulse var(--duration) infinite alternate linear;
+	}
+*/
 
 @keyframes button-pulse {
 	0% {

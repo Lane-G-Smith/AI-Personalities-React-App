@@ -36,7 +36,8 @@ export default function DarkBtn() {
 			id="theme-toggle"
 			onClick={() => toggleTheme(darkTheme, setTheme)}
 			aria-label="Dark mode toggle"
-			className="p-1 my-3 bg-slate-500 text-yellow-400 dark:text-amber-500 hover:scale-110 duration-100 hover:duration-100 rounded-lg text-xs font-bold fa-large"
+			className="p-1 my-3 bg-slate-500 text-yellow-400 dark:text-amber-500 hover:border-amber-500 focus:border-amber-500 hover:border-4 focus:border-4 hover:border-solid focus:border-solid focus:scale-110 hover:scale-110 duration-100 focus:duration-100 hover:duration-100 rounded-lg text-xs font-bold fa-large"
+			tabIndex={0}
 		>
 			<FontAwesomeIcon icon={darkTheme ? faMoon : faSun} />
 		</button>

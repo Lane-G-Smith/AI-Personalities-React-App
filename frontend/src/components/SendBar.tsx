@@ -3,6 +3,7 @@ import { ChatBot } from '../../../common/ChatBot';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { Message, MessageAuthorRole } from '../../../common/Message';
 import { ReactStateFunction } from '../types';
+import { SERVER_API_BASE } from '../config';
 
 export default function SendBar({
 	currentBot,
@@ -47,7 +48,7 @@ export default function SendBar({
 			input.disabled = true;
 
 			const res = await fetch(
-				`http://localhost:8000/api/bots/${currentBot.name.toLowerCase()}/chat`,
+				`${SERVER_API_BASE}/bots/${currentBot.name.toLowerCase()}/chat`,
 				{
 					headers: [['Content-Type', 'application/json']],
 					method: 'POST',
@@ -98,6 +99,7 @@ export default function SendBar({
 				onKeyDown={e => {
 					if (e.key === 'Enter') createMessage();
 				}}
+				onContextMenu={event => event.stopPropagation()}
 			/>
 			<button
 				onClick={() => {

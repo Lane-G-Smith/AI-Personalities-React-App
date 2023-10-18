@@ -17,14 +17,15 @@ export default function SideBar({
 			className="flex flex-grow-0 flex-col w-1/5 min-h-screen h-screen m-0 p-2 border-solid border-2 border-emerald-500"
 		>
 			<div id="topbar" className="flex-auto flex-grow-0">
-				{/* Input element for name, may be useful in future */}
 				<input
 					type="text"
 					name="name"
 					id="name"
-					className="flex-shrink m-2 p-0.5 px-2 border-none rounded-md max-w-xs w-48"
+					className="flex-shrink m-2 p-0.5 px-2 border-none rounded-md w-48 text-black bg-slate-300 dark:bg-slate-400"
 					placeholder="Name"
 					autoComplete="name"
+					tabIndex={0}
+					onContextMenu={event => event.stopPropagation()}
 				/>
 				<DarkBtn />
 			</div>
