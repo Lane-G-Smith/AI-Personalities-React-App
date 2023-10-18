@@ -15,18 +15,18 @@ export default function SideBar({
 	return (
 		<section
 			id="sidebar"
-			className="flex flex-grow-0 flex-col w-1/5 min-h-screen h-screen m-0 p-2 border-solid border-2 border-emerald-500"
+			className="flex flex-grow-0 flex-col justify-start w-1/5 min-h-screen h-screen m-0 p-2 border-solid border-2 border-emerald-500"
 		>
-			<div id="topbar" className="flex-auto flex-grow-0">
-				{/* Input element for name */}
-				<input
-					type="text"
-					name="name"
-					id="name"
-					className="flex-shrink m-2 p-0.5 px-2 border-none rounded-md max-w-xs w-48"
-					placeholder="Name"
-					autoComplete="name"
-				/>
+			{/* Input element for name */}
+			<input
+				type="text"
+				name="name"
+				id="name"
+				className="flex-shrink m-2 p-0.5 px-2 border-none rounded-md"
+				placeholder="Name"
+				autoComplete="name"
+			/>
+			<div id="topbar" className="flex flex-row flex-grow-0 justify-center">
 				<ClickVoteLikes />
 				<DarkBtn />
 			</div>
@@ -38,6 +38,8 @@ export default function SideBar({
 					bot={bot}
 				/>
 			))}
+
+			<div id='bottombar' className='flex-grow flex flex-col justify-end pb-4'><p className='flex'>Likes provided by <a href='https://clickvote.dev' className='ml-1'>ClickVote</a></p></div>
 		</section>
 	);
 }
