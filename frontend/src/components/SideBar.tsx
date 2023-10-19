@@ -4,6 +4,8 @@ import BotSidebarTab from './BotSidebarTab';
 import DarkBtn from './DarkBtn';
 import { ReactStateFunction } from '../types';
 import ClickVoteLikes from './ClickVoteLikes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function SideBar({
 	currentBot,
@@ -15,8 +17,13 @@ export default function SideBar({
 	return (
 		<section
 			id="sidebar"
-			className="flex flex-grow-0 flex-col justify-start w-1/5 min-h-screen h-screen m-0 p-2 border-solid border-2 border-emerald-500"
+			className="flex flex-grow-0 flex-col justify-start w-1/5 min-h-screen h-screen m-0 px-2 py-4 border-solid border-2 border-emerald-500"
 		>
+			<ClickVoteLikes />
+			{/* <div
+				id="topbar"
+				className="flex flex-row flex-grow-0 justify-center"
+			></div> */}
 			{/* Input element for name */}
 			<input
 				type="text"
@@ -26,10 +33,7 @@ export default function SideBar({
 				placeholder="Name"
 				autoComplete="name"
 			/>
-			<div id="topbar" className="flex flex-row flex-grow-0 justify-center">
-				<ClickVoteLikes />
-				<DarkBtn />
-			</div>
+			<DarkBtn />
 
 			{...chatBots.map(bot => (
 				<BotSidebarTab
@@ -39,11 +43,17 @@ export default function SideBar({
 				/>
 			))}
 
-			<div id="bottombar" className="flex-grow flex flex-col justify-end pb-4">
-				<p className="flex">
+			<div id="bottombar" className="flex-grow flex flex-col justify-end">
+				<p className="block">
 					Likes provided by{' '}
 					<a href="https://clickvote.dev" className="ml-1">
 						ClickVote
+					</a>
+				</p>
+				<p className="block">
+					Source code available on{' '}
+					<a href="https://github.com/Lane-G-Smith/AI-Personalities-React-App">
+						GitHub <FontAwesomeIcon icon={faGithub} className="text-2xl" />
 					</a>
 				</p>
 			</div>

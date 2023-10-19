@@ -8,7 +8,7 @@ import { ClientJS } from 'clientjs';
 
 export default function ClickVoteLikes() {
 	return (
-		<div className="flex mr-4">
+		<div className="block p-0 m-0">
 			<ClickVoteProvider
 				value={{
 					apiUrl: 'socket.clickvote.dev',
