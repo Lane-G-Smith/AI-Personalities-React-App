@@ -52,12 +52,23 @@ export default function SendBar({
 				{
 					headers: [['Content-Type', 'application/json']],
 					method: 'POST',
-					body: JSON.stringify({ message: value, username })
+					body: JSON.stringify({
+						message: value,
+						username
+					})
 				}
 			);
 			const data:
-				| { err: string; msg?: undefined; response?: undefined }
-				| { err?: undefined; msg: string; response: string } = await res.json();
+				| {
+						err: string;
+						msg?: undefined;
+						response?: undefined;
+				  }
+				| {
+						err?: undefined;
+						msg: string;
+						response: string;
+				  } = await res.json();
 
 			if (data.err || !data.response) {
 				console.error(data.err);

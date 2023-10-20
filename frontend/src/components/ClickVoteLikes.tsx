@@ -18,7 +18,7 @@ export default function ClickVoteLikes() {
 			>
 				<ClickVoteComponent
 					id="ai-personalities-react-app"
-					voteTo={window.location.href}
+					voteTo={window.location.host}
 				>
 					{props => <LikeStyle {...props} />}
 				</ClickVoteComponent>

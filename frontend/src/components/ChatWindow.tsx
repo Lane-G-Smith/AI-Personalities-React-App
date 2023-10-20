@@ -16,10 +16,7 @@ export default function ChatWindow({ currentBot }: { currentBot: ChatBot }) {
 
 	return (
 		<div className="border-amber-600 min-h-screen h-screen flex flex-grow flex-col items-stretch place-items-end justify-end flex-nowrap">
-			<div
-				id="messages"
-				className="border-amber-600 h-max p-8 flex-grow-0"
-			>
+			<div id="messages" className="border-amber-600 h-max p-8 flex-grow-0">
 				{...messages.map(message => <MessageBox message={message} />)}
 			</div>
 			<SendBar

@@ -11,7 +11,7 @@ export default function App() {
 	});
 
 	return (
-		<div className="App bg-slate-100 dark:bg-slate-700 text-black dark:text-white min-w-screen w-screen h-full flex flex-row">
+		<div className="App bg-slate-100 dark:bg-slate-700 text-black dark:text-white min-w-screen w-screen h-screen flex flex-row">
 			<SideBar currentBot={currentBot} setCurrentBot={setCurrentBot} />
 			<ChatWindow currentBot={currentBot} />
 		</div>
