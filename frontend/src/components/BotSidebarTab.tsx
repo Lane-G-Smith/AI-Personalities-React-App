@@ -4,6 +4,7 @@ import Tooltip from './Tooltip';
 import 'tippy.js/animations/shift-away-extreme.css';
 import 'tippy.js/themes/material.css';
 import { ReactStateFunction } from '../types';
+import { SERVER_API_BASE } from '../config';
 
 export default function BotSidebarTab({
 	selected,
@@ -32,7 +33,7 @@ export default function BotSidebarTab({
 				}}
 			>
 				<img
-					src="https://discog.localplayer.dev/logo.png"
+					src={`${SERVER_API_BASE}/assets/bot/${bot.name.toLowerCase()}/icon`}
 					alt={bot.name}
 					className="border-red-500 border-2 h-8 aspect-square"
 				/>

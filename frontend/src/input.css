@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 a {
 	font-weight: 500;
 	color: #646cff;
@@ -13,7 +15,7 @@ a:hover {
 }
 
 body {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: Ubuntu, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 	text-align: center;
@@ -38,10 +40,6 @@ h1 {
 }
 
 #theme-toggle {
-	border-radius: 8px;
-	border: 2px solid #888;
-	padding: 0.6em 1.2em;
-	font-size: 1em;
 	font-weight: 500;
 	font-family: inherit;
 	text-decoration: solid underline #646cff;
@@ -49,14 +47,16 @@ h1 {
 	transition: border-color 0.25s;
 }
 
-#theme-toggle:hover {
-	border-color: #646cff;
-	--duration: 1.25s;
-	animation: button-pulse var(--duration) infinite alternate linear;
-	-webkit-animation: button-pulse var(--duration) infinite alternate linear;
-	-moz-animation: button-pulse var(--duration) infinite alternate linear;
-	-o-animation: button-pulse var(--duration) infinite alternate linear;
-}
+/**
+	#theme-toggle:hover,
+	#theme-toggle:focus {
+		--duration: 1.25s;
+		animation: button-pulse var(--duration) infinite alternate linear;
+		-webkit-animation: button-pulse var(--duration) infinite alternate linear;
+		-moz-animation: button-pulse var(--duration) infinite alternate linear;
+		-o-animation: button-pulse var(--duration) infinite alternate linear;
+	}
+*/
 
 @keyframes button-pulse {
 	0% {

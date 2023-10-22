@@ -2,6 +2,7 @@ import express, { Request } from 'express';
 import ChatBots from '../../common/chatBots';
 import ChatBotManager from '../../common/ChatBotManager';
 import OpenAI from 'openai';
+import { resolve } from 'path';
 
 const bots = new ChatBotManager(
 	new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
@@ -52,6 +53,26 @@ router.post('/bots/:id/chat', async (req: Request, res) => {
 			response: await bots.getChatCompletion(id, username, message)
 		})
 		.end();
+});
+
+router.get('/assets/bot/:id/icon', (req: Request, res) => {
+	res.header('Access-Control-Allow-Origin', '*');
+
+	const { id } = req.params;
+	if (!bots.hasBot(id)) {
+		res.status(404).json({
+			err: 'Chatbot not found'
+		});
+		return;
+	}
+
+	try {
+		res.sendFile(`${id}.webp`, {
+			root: resolve('backend/assets/bot_icons')
+		});
+	} catch {
+		res.sendStatus(500).end();
+	}
 });
 
 // get all chatbots

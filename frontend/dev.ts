@@ -2,7 +2,9 @@ import { spawn } from 'child_process';
 import { stdout } from 'process';
 
 const processes = [
-	spawn('npm urn tailwind:watch', { shell: true }),
+	spawn('npm urn tailwind:watch', {
+		shell: true
+	}),
 	spawn('npm urn vite:dev', { shell: true })
 ];
 for (const p of processes) {
