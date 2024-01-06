@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import DarkBtn from './components/DarkBtn';
+import DarkBtn from '../components/DarkBtn';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
-import Tooltip from './components/Tooltip';
-import List from './components/List';
+import Tooltip from '../components/Tooltip';
+import List from '../components/List';
 
 export default function Home() {
 	if (window.location.pathname === '/')

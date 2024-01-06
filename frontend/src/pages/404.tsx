@@ -1,5 +1,5 @@
-import Code from './components/Code';
-import DarkBtn from './components/DarkBtn';
+import Code from '../components/Code';
+import DarkBtn from '../components/DarkBtn';
 import query_string from 'query-string';
 const { parse } = query_string;
 

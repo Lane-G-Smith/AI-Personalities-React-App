@@ -1,6 +1,8 @@
 import { Collection } from '@discordjs/collection';
 import OpenAI from 'openai';
 import { ChatBot } from './ChatBot';
+import { SERVER_API_BASE } from '../frontend/src/config';
+import { BotData } from './types';
 
 export default class ChatBotManager {
 	private client: OpenAI;
@@ -14,6 +16,28 @@ export default class ChatBotManager {
 
 	hasBot(botName: string) {
 		return this.bots.has(botName);
+	}
+
+	getBotData(botName: string): BotData | null {
+		const chatBot = this.bots.get(botName);
+		if (!chatBot) return null;
+		return {
+			name: chatBot.name,
+			about: chatBot.about,
+			iconURL: `${SERVER_API_BASE}/assets/bot/${chatBot.name.toLowerCase()}/icon`
+		};
+	}
+
+	getAllBotData(): BotData[] {
+		return this.bots.map(chatBot => ({
+			name: chatBot.name,
+			about: chatBot.about,
+			iconURL: `${SERVER_API_BASE}/assets/bot/${chatBot.name.toLowerCase()}/icon`
+		}));
+	}
+
+	getAllBotNames(): string[] {
+		return this.bots.map(chatBot => chatBot.name);
 	}
 
 	async getChatCompletion(botName: string, username: string, prompt: string) {

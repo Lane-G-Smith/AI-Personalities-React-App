@@ -4,7 +4,7 @@ import { Message, MessageAuthorRole } from '../../../common/Message';
 import SendBar from './SendBar';
 import MessageBox from './MessageBox';
 
-export default function ChatWindow({ currentBot }: { currentBot: ChatBot }) {
+export default function ChatWindow({ currentBot }: { currentBot: string }) {
 	const [messages, setMessages] = useState<Message[]>([
 		new Message(
 			MessageAuthorRole.System,

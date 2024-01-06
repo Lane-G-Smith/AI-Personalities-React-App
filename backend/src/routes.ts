@@ -11,11 +11,6 @@ const bots = new ChatBotManager(
 
 const router = express.Router();
 
-// get all chatbots
-router.get('/', async (_req: Request, res) => {
-	res.json({ all: ChatBots.map(c => c.name) });
-});
-
 router.post('/bots/:id/chat', async (req: Request, res) => {
 	res.header('Content-Type', 'application/json');
 	res.header('Access-Control-Allow-Origin', '*');
@@ -23,27 +18,27 @@ router.post('/bots/:id/chat', async (req: Request, res) => {
 	if (req.headers['content-type']?.toLowerCase() !== 'application/json') {
 		res.status(415).json({
 			err: 'Invalid content type'
-		});
+		}).end();
 		return;
 	}
 	const { id } = req.params;
 	if (!bots.hasBot(id)) {
 		res.status(404).json({
 			err: 'Chatbot not found'
-		});
+		}).end();
 		return;
 	}
 	const { message, username } = req.body;
 	if (typeof message !== 'string') {
 		res.status(422).json({
 			err: "Invalid request body: 'message' either missing or not a string"
-		});
+		}).end();
 		return;
 	}
 	if (typeof username !== 'string') {
 		res.status(422).json({
 			err: "Invalid request body: 'username' either missing or not a string"
-		});
+		}).end();
 		return;
 	}
 	res
@@ -62,7 +57,7 @@ router.get('/assets/bot/:id/icon', (req: Request, res) => {
 	if (!bots.hasBot(id)) {
 		res.status(404).json({
 			err: 'Chatbot not found'
-		});
+		}).end();
 		return;
 	}
 
@@ -75,9 +70,40 @@ router.get('/assets/bot/:id/icon', (req: Request, res) => {
 	}
 });
 
-// get all chatbots
 router.get('/', (_req: Request, res) => {
-	res.json([ChatBots.map(c => c.name)]);
+	res.sendStatus(200).end();
+});
+
+// get detailed bot info
+router.get('/bot/:id/data', (req: Request, res) => {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Content-Type', 'application/json');
+
+	const { id } = req.params;
+	if (!bots.hasBot(id)) {
+		res.status(404).json({
+			err: 'Chatbot not found'
+		});
+		return;
+	}
+
+	res.status(200).json(bots.getBotData(id)!).end();
+})
+
+// get all bot data
+router.get('/bots/all/data', (_req: Request, res) => {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Content-Type', 'application/json');
+
+	res.status(200).json(bots.getAllBotData()).end();
+});
+
+// get all bots
+router.get('/bots/all', (_req: Request, res) => {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Content-Type', 'application/json');
+
+	res.status(200).json(bots.getAllBotNames()).end();
 });
 
 // Post new chatbot

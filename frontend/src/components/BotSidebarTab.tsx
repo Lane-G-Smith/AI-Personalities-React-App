@@ -1,24 +1,24 @@
-import { ChatBot } from '../../../common/ChatBot';
 import Tippy from '@tippyjs/react';
 import Tooltip from './Tooltip';
 import 'tippy.js/animations/shift-away-extreme.css';
 import 'tippy.js/themes/material.css';
 import { ReactStateFunction } from '../types';
 import { SERVER_API_BASE } from '../config';
+import { BotData } from '../../../common/types';
 
 export default function BotSidebarTab({
 	selected,
 	setSelected,
-	bot
+	data
 }: {
 	selected: boolean;
-	setSelected: ReactStateFunction<ChatBot>;
-	bot: ChatBot;
+	setSelected: ReactStateFunction<string>;
+	data: BotData;
 }) {
 	return (
 		<Tippy
 			animation="shift-away-extreme"
-			content={<Tooltip>{bot.about}</Tooltip>}
+			content={<Tooltip>{}</Tooltip>}
 			delay={[500, 250]}
 			theme="material"
 		>
@@ -33,11 +33,11 @@ export default function BotSidebarTab({
 				}}
 			>
 				<img
-					src={`${SERVER_API_BASE}/assets/bot/${bot.name.toLowerCase()}/icon`}
-					alt={bot.name}
+					src={`${SERVER_API_BASE}/assets/bot/${bot.toLowerCase()}/icon`}
+					alt={bot}
 					className="border-red-500 border-2 h-8 aspect-square"
 				/>
-				<p className="bot-name flex-grow p-4 text-xl font-medium">{bot.name}</p>
+				<p className="bot-name flex-grow p-4 text-xl font-medium">{bot}</p>
 			</div>
 		</Tippy>
 	);

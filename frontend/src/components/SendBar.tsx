@@ -10,7 +10,7 @@ export default function SendBar({
 	messages,
 	setMessages
 }: {
-	currentBot: ChatBot;
+	currentBot: string;
 	messages: Message[];
 	setMessages: ReactStateFunction<Message[]>;
 }) {

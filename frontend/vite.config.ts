@@ -14,11 +14,13 @@ export default defineConfig({
 		cors: true
 	},
 	appType: 'mpa',
+	root: 'src',
 	build: {
+		emptyOutDir: true,
 		rollupOptions: {
 			input: {
 				main: resolve(join(__dirname, './index.html')),
-				app: resolve(join(__dirname, './app/index.html')),
+				app: resolve(join(__dirname, './app.html')),
 				404: resolve(join(__dirname, './404.html'))
 			}
 		}
